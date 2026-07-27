@@ -1,4 +1,4 @@
-module github.com/jaredtmartin/fido.git
+module github.com/jaredtmartin/fido
 
 go 1.25.0
 
