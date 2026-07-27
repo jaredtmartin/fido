@@ -3,7 +3,7 @@ package fido_test
 import (
 	"testing"
 
-	"github.com/jaredtmartin/fido.git"
+	"github.com/jaredtmartin/fido"
 )
 
 func TestDiv(t *testing.T) {
