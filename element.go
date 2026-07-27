@@ -71,8 +71,7 @@ type Element interface {
 	// Renders the element as HTML string.
 	Render() string
 
-	// Common attrs
-
+	//// Common attrs
 	// Sets the text content of the element.
 	Text(content string) Element
 	// Sets the HTML content of the element without escaping.
