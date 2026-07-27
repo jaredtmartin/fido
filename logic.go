@@ -16,7 +16,7 @@ func IfElse(condition bool, ifElement Element, elseElement ...Element) Element {
 	return None()
 }
 func For[T any](objs []T, element func(T, int) Element) Element {
-	result := Div("")
+	result := Fragment()
 	for i, obj := range objs {
 		result = result.Add(element(obj, i))
 	}

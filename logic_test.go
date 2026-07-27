@@ -27,7 +27,7 @@ func TestFor(t *testing.T) {
 		return P(item)
 	})
 	result := l.Render()
-	assert.Equalf(t, `<div><p>apple</p><p>bear</p><p>coffee</p></div>`, result, "should match")
+	assert.Equalf(t, `<p>apple</p><p>bear</p><p>coffee</p>`, result, "should match")
 }
 func TestSwitchCase(t *testing.T) {
 	l := Switch("apple",
