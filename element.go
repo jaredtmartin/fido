@@ -90,9 +90,10 @@ type Element interface {
 	HXConfirm(prompt string) Element
 	// Sets the hx-target attribute of the element.
 	HXTarget(target string) Element
-
 	// Sets the hx-trigger attribute of the element.
 	HXTrigger(trigger string) Element
+	// Sets the hx-include attribute of the element.
+	HXInclude(selector string) Element
 	// Sets the hx-swap attribute of the element.
 	HXSwap(value string) Element
 	// Sets the hx-select attribute of the element.
@@ -568,6 +569,12 @@ func (e *DefaultElement) HXConfirm(prompt string) Element {
 // Sets the hx-target attribute of the element.
 func (e *DefaultElement) HXTarget(target string) Element {
 	e.add_attribute("hx-target", target)
+	return e
+}
+
+// Sets the hx-include attribute of the element.
+func (e *DefaultElement) HXInclude(selector string) Element {
+	e.add_attribute("hx-include", selector)
 	return e
 }
 
