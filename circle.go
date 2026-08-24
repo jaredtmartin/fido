@@ -5,6 +5,7 @@ import (
 )
 
 func Circle(x, y, radius int) *SvgCircle {
+	// test
 	circle := &SvgCircle{
 		DefaultElement: NewDefaultElement("circle"),
 	}
