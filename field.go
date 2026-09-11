@@ -77,6 +77,7 @@ func Textarea(name, label, value string) *Field {
 	field.Input.Text(value).Tag("textarea").RemoveAttr("type")
 	return field
 }
+
 func Select(name, label, value string, options []Option, renderOption ...func(option Option, value string) Element) *Field {
 	field := NewField(name, label, value, "select")
 	renderOpt := defaultRenderOption
@@ -136,7 +137,10 @@ func (t *Field) Checked(value ...bool) *Field {
 	}
 	return t
 }
-
+func (t *Field) Type(value string) Element {
+	t.Input.Type(value)
+	return t
+}
 func initializeElement(name, label, value string) (Element, Element, Element) {
 	id := name + "-field"
 	var labelEl, inputEl, errorEl Element
